@@ -21,7 +21,7 @@ function putPlaces(req, res) {
         res.json({
           message: 'actualizado'
         })
-      })
+      })        
       .catch(function(err){
         res.json({
           error: err

@@ -1,13 +1,20 @@
 const Place = require('../models/Place');
 
-function postplaces(req, res) {
+function postPlaces(req, res) {
+
+  const name = req.body.name;
+  const address = req.body.address;
+  const rating = req.body.rating;
+  const lat = req.body.location.lat;
+  const lng = req.body.location.lng;
+
   const newPlace = new Place({
-    name: req.body.name,
-    address: req.body.address,
-    rating: req.body.rating,
+    name: name,
+    address: address,
+    rating: rating,
     location: {
-      lat: req.body.location.lat,
-      lng: req.body.location.lng
+      lat: lat,
+      lng: lng
     }
   });
 
@@ -24,4 +31,4 @@ function postplaces(req, res) {
     })
 }
 
-module.exports = postplaces;
+module.exports = postPlaces;

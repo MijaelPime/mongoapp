@@ -1,6 +1,6 @@
 const Place = require('../models/Place')
 
-function getplaces(req , res){
+function selectPlaces(req , res){
     const id = req.params.id;
     Place.find()
     .where('_id').equals(id)
@@ -16,4 +16,4 @@ function getplaces(req , res){
     })
 }
 
-module.exports = getplaces
+module.exports = selectPlaces

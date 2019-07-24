@@ -1,6 +1,6 @@
 const Place = require('../models/Place');
 
-function deleteplaces(req , res){
+function deletePlaces(req , res){
 
     const id = req.params.id;
 
@@ -19,4 +19,4 @@ function deleteplaces(req , res){
       })
 }
 
-module.exports = deleteplaces
+module.exports = deletePlaces

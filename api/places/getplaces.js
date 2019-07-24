@@ -1,6 +1,6 @@
 const Place = require('../models/Place')
 
-function getplaces(req , res){
+function getPlaces(req , res){
     Place.find()
     .then(function(doc){
         res.json({
@@ -14,4 +14,4 @@ function getplaces(req , res){
     })
 }
 
-module.exports = getplaces
+module.exports = getPlaces

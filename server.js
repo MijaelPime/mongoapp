@@ -3,6 +3,10 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 const mongose = require('mongoose');
+const cors = require("cors");
+
+app.use('/',express.static('../cliente'));
+app.use(cors());
 
 const api = require("./api"); //traigo todo de la carpeta api
 
